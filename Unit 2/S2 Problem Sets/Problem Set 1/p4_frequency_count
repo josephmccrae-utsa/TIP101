@@ -1,0 +1,21 @@
+"""
+Count number of occurences of each integer. 
+Returns dictionary with integer : integerCount key-value pairs.
+
+"""
+
+def count_occurrences(nums):
+    dict = {}
+    
+    for num in nums:
+        if num not in dict:
+            dict[num] = 1
+        elif num in dict:
+            dict[num] += 1
+    
+    return dict
+
+
+
+nums = [1, 2, 2, 3, 3, 3, 4]
+print(count_occurrences(nums))
