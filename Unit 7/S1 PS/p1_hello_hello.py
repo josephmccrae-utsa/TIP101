@@ -9,7 +9,7 @@ def repeat_hello(n):
 		
 """
 Understand:
-- Write function called reapeat_hello_iterative() with parameter n.
+- Write function called repeat_hello_iterative() with parameter n.
 - Print 'Hello' n times.
 Plan:
 - Use a print statement including "Hello" and multiply it by n.
