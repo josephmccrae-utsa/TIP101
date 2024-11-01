@@ -9,7 +9,9 @@ Plan:
 - Sub-Problem: N/A
 - Recursive Case: is_nested(paren_s)
 
-- Check paen_s until "()", and pop it out, then call the recursive case.
+- Check the outside of paren_s where paren_s[0] = "(" and paren_s[-1] = ")".
+- If True, call recursive case via substring without first and last value.
+- Not "(" and ")"? Then return False.
 Implement:
 """
 def is_nested(paren_s):
@@ -18,8 +20,6 @@ def is_nested(paren_s):
     
     if paren_s == "":
         return True
-
-    # paren_s = "(((())))"
 
     if paren_s[0] == "(" and paren_s[-1] == ")":
         return is_nested(paren_s[1:-1])
@@ -31,4 +31,3 @@ paren_s = "(())"
 
 print(is_nested(paren_s))
 
-""
